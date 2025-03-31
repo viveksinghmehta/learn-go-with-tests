@@ -10,11 +10,23 @@ func Sum(numbers []int) int {
 
 func SumAll(numbersToSum ...[]int) []int {
 
-	lengthOfSlice := len(numbersToSum)
-	sum := make([]int, lengthOfSlice)
+	var sum []int
 
-	for i, slice := range numbersToSum {
-		sum[i] = Sum(slice)
+	for _, slice := range numbersToSum {
+		sum = append(sum, Sum(slice))
+	}
+	return sum
+}
+
+func SumAllTails(tailsToSum ...[]int) []int {
+	var sum []int
+	for _, slice := range tailsToSum {
+		if len(slice) == 0 {
+			sum = append(sum, 0)
+		} else {
+			tails := slice[1:]
+			sum = append(sum, Sum(tails))
+		}
 	}
 	return sum
 }
