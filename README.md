@@ -11,5 +11,9 @@ learnGoWithTests
     |    |- iteration_test.go
     |    |- iteration.go
     |
+    |-> Arrays
+    |    |- arrys.go
+    |    |- arrays_test.go
+    |
     |- go.mod
     |- README.md
