@@ -16,3 +16,7 @@ func Perimeter(rectangle Rectangle) float64 {
 func Area(rect Rectangle) float64 {
 	return rect.height * rect.width
 }
+
+func Area(circle Circle) float64 {
+
+}
